@@ -1,0 +1,4 @@
+# User uploads and local tracker state may contain private spreadsheet data.
+/data/
+__pycache__/
+*.py[cod]
