@@ -73,6 +73,12 @@ create table if not exists public.tracker_attendance (
   work_date date not null,
   check_in_at timestamptz not null default now(),
   check_out_at timestamptz,
+  check_in_lat double precision,
+  check_in_lng double precision,
+  check_in_accuracy_m double precision,
+  check_out_lat double precision,
+  check_out_lng double precision,
+  check_out_accuracy_m double precision,
   duration_minutes integer generated always as (
     case when check_out_at is null then null
       else floor(extract(epoch from (check_out_at - check_in_at)) / 60)::integer
@@ -83,6 +89,14 @@ create table if not exists public.tracker_attendance (
   constraint tracker_attendance_one_entry_per_day
     unique (user_id, work_date)
 );
+
+alter table public.tracker_attendance
+  add column if not exists check_in_lat double precision,
+  add column if not exists check_in_lng double precision,
+  add column if not exists check_in_accuracy_m double precision,
+  add column if not exists check_out_lat double precision,
+  add column if not exists check_out_lng double precision,
+  add column if not exists check_out_accuracy_m double precision;
 
 create index if not exists tracker_attendance_date_idx
   on public.tracker_attendance(work_date desc, check_in_at desc);
