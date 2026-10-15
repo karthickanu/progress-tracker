@@ -240,8 +240,8 @@ jobs:
           EOF
           cat > android-app/app/src/main/res/drawable/ic_progress_tracker.xml <<'EOF'
           <vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="48dp" android:height="48dp" android:viewportWidth="48" android:viewportHeight="48">
-              <path android:fillColor="#5B74E8" android:pathData="M0,10C0,4.48 4.48,0 10,0h28c5.52,0 10,4.48 10,10v28c0,5.52 -4.48,10 -10,10H10C4.48,48 0,43.52 0,38z" />
-              <path android:fillColor="#FFFFFFFF" android:pathData="M15,10h13l7,7v21H15c-1.1,0 -2,-0.9 -2,-2V12c0,-1.1 0.9,-2 2,-2zM27,12v7h7M18,24h13v2H18zM18,29h13v2H18zM18,34h9v2h-9z" />
+              <path android:fillColor="#5F83E5" android:pathData="M0,10C0,4.48 4.48,0 10,0h28c5.52,0 10,4.48 10,10v28c0,5.52 -4.48,10 -10,10H10C4.48,48 0,43.52 0,38z" />
+              <path android:fillColor="#FFFFFFFF" android:pathData="M15.2,19.2l1.7,1.8 3.2,-3.3 1.6,1.5 -4.8,5 -3.3,-3.4zM25,19h13v2h-13zM15.2,28.2l1.7,1.8 3.2,-3.3 1.6,1.5 -4.8,5 -3.3,-3.4zM25,28h13v2h-13zM15.2,37.2l1.7,1.8 3.2,-3.3 1.6,1.5 -4.8,5 -3.3,-3.4zM25,37h13v2h-13z" />
           </vector>
           EOF
 
